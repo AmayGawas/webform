@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>InfoFest 2023 Registration Form</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+	<style>
+		body {
+			display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    background-image: url(19366.jpg);
+    
+    background-size: 100%;
+    overflow-x: hidden;
+}
+
+h1 {
+	color: #040500;
+	text-align: center;
+	margin-top: 30px;
+}
+
+label {
+	color: #031f46;
+	font-weight: bold;
+}
+
+.form-control {
+	border-radius: 0px;
+	border-color: #2b14ad;
+	box-shadow: none;
+	border-radius: 5px;
+}
+
+.btn-primary {
+	align-self: center;
+	background-color: #2432d4;
+	border-color: #ffffff;
+	border-radius: 10px;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	color: #ffffff;
+}
+
+.btn-primary:hover {
+	background-color: #0d116e;
+	border-color: #fdfdfd;
+	
+}
+.media{
+    display: flex;
+    padding-top: 25px;
+    padding-left: 25px;
+}
+.mr-3{
+    height: 100px;;
+}
+.media-body{
+    padding-left: 38%;
+}
+.presents{
+    padding-left: 10px;
+}
+.mt-0{
+
+}
+	</style>
+</head>
+<body>
+	<div class="media">
+        <img src="The_logo_of_Goa_University_with_the_aspect_ratio_of_1.1.5 (1).png" class="mr-3" alt="...">
+        <div class="media-body">
+          <h5 class="mt-0">Goa University </h5>
+                 
+          
+        </div>
+      </div>
+	<div class="container">
+		<h1>InfoFest 2023 Registration Form</h1>
+		<form id="myForm" onsubmit="return Submit()">
+			<div class="form-group">
+                <label for="teamname">Team Name:</label>
+				<input type="text" class="form-control" id="teamname" placeholder="Enter team name" required>
+            </div>
+            <div class="form-group">
+                <label for="cordinatorname">Co-ordinator Name:</label>
+				<input type="text" class="form-control" id="cordinatorname" placeholder="Enter co-ordinator name" required>
+			</div>
+			<div class="form-group">
+				<label for="email">Email address:</label>
+				<input type="email" class="form-control" id="email" placeholder="Enter email" required>
+			</div>
+            <div class="form-group">
+				<label for="mobileno">Mobile No:</label>
+				<input type="number" class="form-control" id="number" placeholder="Enter mobile no." required>
+			</div>
+            <div class="form-group">
+                <label for="depname">Department Name:</label>
+				<input type="text" class="form-control" id="depname" placeholder="Enter department name" required>
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+
+	<!-- Bootstrap JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<!-- JavaScript -->
+	<script>
+		function Submit() {
+			// Get form values
+            var teamname = document.getElementById("teamname").value;
+			var cordinatorname = document.getElementById("cordinatorname").value;
+			var email = document.getElementById("email").value;
+            var number = document.getElementById("number").value;
+            var depname = document.getElementById("depname").value;
+			// Save form values to localStorage
+			localStorage.setItem("teamname", teamname);
+            localStorage.setItem("cordinatorname", cordinatorname);
+			localStorage.setItem("email", email);
+            localStorage.setItem("number", number);
+            localStorage.setItem("depname", depname);
+			// Redirect to new page
+			window.location.href = "nextpage.html";
+
+			// Prevent form submission
+			return false;
+		}
+	</script>
+</body>
+</html>
